@@ -1,14 +1,15 @@
 # hanoi
 #include <stdio.h>
-void towerofhanoi(int num,char startpole,char endpole,char temppole)
+void towerofhanoi(int num,char start,char end,char temp)
 {
-if(num==1){
-printf("\nMoving disc 1 from peg %c to peg %c",startpole,endpole);
+if(num==1)
+{
+printf("\nMoving disc 1 from peg %c to peg %c",start,end);
 return;
 }
-towerofhanoi(num-1,startpole,temppole,endpole);
-printf("\nMoving disc %d from peg %c to peg %c",num,startpole,endpole);
-towerofhanoi(num-1,endpole,startpole,temppole);
+towerofhanoi(num-1,start,temp,end);
+printf("\nMoving disc %d from peg %c to peg %c",num,start,end);
+towerofhanoi(num-1,end,start,temp);
 }
 int main()
 {
