@@ -13,7 +13,7 @@ towerOfHanoi(n-1, auxrod, torod, fromrod);
 }
 int main()
 {
-int n = 4; // Number of disks
-towerOfHanoi(n, 'A', 'C', 'B');  // A, B and C are names of rods
+int n = 4; 
+towerOfHanoi(n, 'A', 'C', 'B');  
 return 0;
 }
