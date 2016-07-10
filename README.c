@@ -1,20 +1,19 @@
 # hanoi
 #include <stdio.h>
-void towerofhanoi(int num,char start,char end,char temp)
+void towerOfHanoi(int n, char fromrod, char torod, char auxrod)
 {
-if(num==1)
+if (n == 1)
 {
-printf("\nMoving disc 1 from peg %c to peg %c",start,end);
+printf("\n Move disk 1 from rod %c to rod %c", fromrod, torod);
 return;
 }
-towerofhanoi(num-1,start,temp,end);
-printf("\nMoving disc %d from peg %c to peg %c",num,start,end);
-towerofhanoi(num-1,end,start,temp);
+towerOfHanoi(n-1, fromrod, auxrod, torod);
+printf("\n Move disk %d from rod %c to rod %c", n, fromrod, torod);
+towerOfHanoi(n-1, auxrod, torod, fromrod);
 }
 int main()
 {
-int num;
-scanf("%d",&num);
-towerofhanoi(num,'S','E','T');
+int n = 4; // Number of disks
+towerOfHanoi(n, 'A', 'C', 'B');  // A, B and C are names of rods
 return 0;
 }
