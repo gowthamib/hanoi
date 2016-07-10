@@ -13,7 +13,7 @@ towerOfHanoi(n-1, auxrod, torod, fromrod);
 }
 int main()
 {
-int n = 4; 
+int n = 3; 
 towerOfHanoi(n, 'A', 'C', 'B');  
 return 0;
 }
